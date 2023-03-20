@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>FacePass</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/websdk.js"></script>
+</head>
+<body>
+    <h1> Bank </h1>
+    <div id="facepass_websdk_container"></div>
+</body>
+</html>
+
+<script>
+    const facePassWebSdkContainer = document.getElementById('facepass_websdk_container')
+
+    const facePassWebSDK = new FacePassWebSDK(
+        token,
+        facePassWebSdkContainer
+    )
+    facePassWebSDK.init();
+</script>
