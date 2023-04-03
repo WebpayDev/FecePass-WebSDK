@@ -1,11 +1,12 @@
 class FacePassWebSDK {
-    constructor(token, webSdkContainer) {
+    constructor(token, domain, webSdkContainer) {
         this.token = token;
+        this.domain = domain;
         this.webSdkContainer = webSdkContainer;
     }
 
     init() {
-        fetch(`/enrollment/web-sdk`, {
+        fetch(`${this.domain}/enrollment/web-sdk`, {
             headers: new Headers({
                 'Authorization': 'Bearer ' + this.token,
                 'Content-Type': 'application/json'
