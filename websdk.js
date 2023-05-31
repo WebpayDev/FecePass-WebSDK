@@ -29,6 +29,7 @@ class FacePassWebSDK {
     openIframe(iframeUrl) {
         const iframe = document.createElement('iframe');
         iframe.setAttribute("src", iframeUrl);
+        iframe.allow = 'autoplay; camera;'
         iframe.style.position = "fixed";
         iframe.style.border = "none";
         iframe.style.height = "80vh";
